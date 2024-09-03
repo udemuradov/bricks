@@ -24,9 +24,9 @@ class {{name.pascalCase()}}Success extends {{name.pascalCase()}}State {
 }
 
 class {{name.pascalCase()}}Failed extends {{name.pascalCase()}}State {
-  final String? err;
+  final String err;
   const {{name.pascalCase()}}Failed({
-    this.err,
+    this.err = 'bloc error',
   }) : super();
 
     @override

@@ -9,5 +9,5 @@ abstract class {{name.pascalCase()}}Api {
   factory {{name.pascalCase()}}Api(Dio dio, {String baseUrl}) = _{{name.pascalCase()}}Api;
 
   @GET('/url-name')
-  Future<HttpResponse<{{name.pascalCase()}}Dto>> {{name}}();
+  Future<HttpResponse<{{name.pascalCase()}}Dto>> fetch{{name.pascalCase()}}();
 }
