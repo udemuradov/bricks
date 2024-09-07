@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part '{{name.snakeCase()}}_dto.g.dart';
+part '../../../../../../feature/__brick__/{{name.snakeCase()}}/data/dto/{{name.snakeCase()}}_dto.g.dart';
 
 @JsonSerializable(createToJson: false)
 class {{name.pascalCase()}}Dto extends Equatable {

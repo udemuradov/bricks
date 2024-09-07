@@ -9,6 +9,7 @@ dart pub global activate mason_cli
 ```sh
 mason add feature
   --git-url https://github.com/udemuradov/bricks.git
+  --git-path bricks/feature
 ```
 
 
@@ -34,5 +35,5 @@ project?
 
 | Name | Description |
 | --- | --- |
-| [feature](./feature/README.md) | Feature create |
+| [feature](./bricks/feature) | Feature create |
 

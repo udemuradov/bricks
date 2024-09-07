@@ -2,7 +2,7 @@ import 'package:dio/dio.dart' hide Headers;
 import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/data/dto/{{name.snakeCase()}}_dto.dart';
 import 'package:retrofit/retrofit.dart';
 
-part '{{name.snakeCase()}}_api.g.dart';
+part '../../../../../../feature/__brick__/{{name.snakeCase()}}/data/datasource/{{name.snakeCase()}}_api.g.dart';
 
 @RestApi(baseUrl: String.fromEnvironment('HOST'))
 abstract class {{name.pascalCase()}}Api {
