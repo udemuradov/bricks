@@ -4,7 +4,7 @@
 dart pub global activate mason_cli
 ```
 
-2. Activate view bricks
+2. Activate feature bricks
 - Using `mason add` command
 ```sh
 mason add feature
