@@ -6,9 +6,9 @@ import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/domain/model/
 import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/data/mappers/{{name.snakeCase()}}_mapper.dart';
 import 'package:retrofit/retrofit.dart';
 
-class {{name.pascalCase()}}Impl extends BaseApiRepository implements {{name.pascalCase()}}Repository {
+class {{name.pascalCase()}}RepositoryImpl extends BaseApiRepository implements {{name.pascalCase()}}Repository {
   final {{name.pascalCase()}}Api _api;
-  {{name.pascalCase()}}Impl(
+  {{name.pascalCase()}}RepositoryImpl(
     this._api,
   );
 

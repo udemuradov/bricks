@@ -11,11 +11,11 @@ class {{name.pascalCase()}}Bloc extends Bloc<{{name.pascalCase()}}Event, {{name.
   {{name.pascalCase()}}Bloc(
     this._{{name.camelCase()}}Repository,
   ) : super(const {{name.pascalCase()}}Loading()) {
-    on<{{name.pascalCase()}}Event>(_fetch{{name.PascalCase()}});
+    on<{{name.pascalCase()}}FetchEvent>(_fetch{{name.PascalCase()}});
   }
 
  void _fetch{{name.PascalCase()}}(
-    {{name.pascalCase()}}Event event,
+    {{name.pascalCase()}}FetchEvent event,
     Emitter<{{name.pascalCase()}}State> emit,
   ) async {
     final DataState dataState = await _{{name.camelCase()}}Repository.fetch{{name.pascalCase()}}();
