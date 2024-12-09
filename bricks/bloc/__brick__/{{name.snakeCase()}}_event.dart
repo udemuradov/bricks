@@ -1,0 +1,1 @@
+{{#use_equatable}}{{> equatable_event }}{{/use_equatable}}{{#use_freezed_union}}{{> freezed_union_event }}{{/use_freezed_union}}{{#use_freezed_sealed}}{{> freezed_sealed_event }}{{/use_freezed_sealed}}

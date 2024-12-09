@@ -4,20 +4,20 @@ import 'package:bloc/bloc.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart' as bloc_concurrency;
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '../../../brick_bloc/__brick__/bloc/{{name.snakeCase()}}_bloc.freezed.dart';
-part '{{name.snakeCase()}}_bloc_event.dart';
-part '{{name.snakeCase()}}_bloc_state.dart';
+part '{{name.snakeCase()}}_bloc.freezed.dart';
+part '{{name.snakeCase()}}_event.dart';
+part '{{name.snakeCase()}}_state.dart';
 
 /// Business Logic Component {{name.pascalCase()}}BLoC
-class {{name.pascalCase()}}BLoC extends Bloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> implements EventSink<{{name.pascalCase()}}Event> {
-  {{name.pascalCase()}}BLoC({
-    required final I{{name.pascalCase()}}Repository repository,
+class {{name.pascalCase()}}Bloc extends Bloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> implements EventSink<{{name.pascalCase()}}Event> {
+  {{name.pascalCase()}}Bloc({
+    required final {{name.pascalCase()}}Repository repository,
     final {{name.pascalCase()}}State? initialState,
   }) : _repository = repository,
         super(
           initialState ??
               {{name.pascalCase()}}State.idle(
-                data: {{name.pascalCase()}}Entity(),
+                data: {{name.pascalCase()}}Model(),
                 message: 'Initial idle state',
               ),
         ) {
@@ -29,7 +29,7 @@ class {{name.pascalCase()}}BLoC extends Bloc<{{name.pascalCase()}}Event, {{name.
     );
   }
   
-  final I{{name.pascalCase()}}Repository _repository;
+  final {{name.pascalCase()}}Repository _repository;
   
   /// Fetch event handler
   Future<void> _fetch(Fetch{{name.pascalCase()}}Event event, Emitter<{{name.pascalCase()}}State> emit) async {
@@ -38,7 +38,6 @@ class {{name.pascalCase()}}BLoC extends Bloc<{{name.pascalCase()}}Event, {{name.
       final newData = await _repository.fetch(event.id);
       emit({{name.pascalCase()}}State.successful(data: newData));
     } on Object catch (err, stackTrace) {
-      //l.e('An error occurred in the {{name.pascalCase()}}BLoC: $err', stackTrace);
       emit({{name.pascalCase()}}State.error(data: state.data));
       rethrow;
     } finally {

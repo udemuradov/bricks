@@ -1,0 +1,22 @@
+import 'dart:async';
+import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
+
+part '{{name.snakeCase()}}_event.dart';
+part '{{name.snakeCase()}}_state.dart';
+
+class {{name.pascalCase()}}Bloc extends Bloc<{{name.pascalCase()}}Event, {{name.pascalCase()}}State> {
+  final {{name.pascalCase()}}Repository _{{name.camelCase()}}Repository;
+  {{name.pascalCase()}}Bloc(
+    this._{{name.camelCase()}}Repository,
+  ) : super(const {{name.pascalCase()}}Loading()) {
+    on<{{name.pascalCase()}}FetchEvent>(_onFetch);
+  }
+
+ void _onFetch{{name.PascalCase()}}(
+    {{name.pascalCase()}}FetchEvent event,
+    Emitter<{{name.pascalCase()}}State> emit,
+  ) async {
+    // TODO: implement event handler
+  }
+}

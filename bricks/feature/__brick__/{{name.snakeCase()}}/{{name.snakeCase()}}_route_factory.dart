@@ -2,10 +2,8 @@ import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/presentation/
 import 'package:go_router/go_router.dart';
 
 class {{name.pascalCase()}}RouteFactory {
-  // final void Function(BuildContext context) onLogin;
-
   static const {{name.snakeCase()}} = '{{name.snakeCase()}}';
-
+  const {{name.pascalCase()}}RouteFactory();
 
   GoRoute get build{{name.pascalCase()}} => GoRoute(
           path: '{{name.paramCase()}}',

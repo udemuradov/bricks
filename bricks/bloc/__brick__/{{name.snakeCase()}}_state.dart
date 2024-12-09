@@ -1,0 +1,1 @@
+{{#use_equatable}}{{> equatable_state }}{{/use_equatable}}{{#use_freezed_union}}{{> freezed_union_state }}{{/use_freezed_union}}{{#use_freezed_sealed}}{{> freezed_sealed_state }}{{/use_freezed_sealed}}

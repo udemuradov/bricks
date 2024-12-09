@@ -4,10 +4,10 @@ import 'package:retrofit/retrofit.dart';
 
 part '{{name.snakeCase()}}_api.g.dart';
 
-@RestApi(baseUrl: String.fromEnvironment('HOST'))
+@RestApi()
 abstract class {{name.pascalCase()}}Api {
-  factory {{name.pascalCase()}}Api(Dio dio, {String baseUrl}) = _{{name.pascalCase()}}Api;
+  factory {{name.pascalCase()}}Api(Dio dio) = _{{name.pascalCase()}}Api;
 
-  @GET('/url-name')
-  Future<HttpResponse<{{name.pascalCase()}}Dto>> fetch{{name.pascalCase()}}();
+  @GET('/url')
+  Future<{{name.pascalCase()}}Dto> fetch{{name.pascalCase()}}();
 }

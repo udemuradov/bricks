@@ -5,7 +5,7 @@ part '{{name.snakeCase()}}_dto.g.dart';
 
 @JsonSerializable(createToJson: false)
 class {{name.pascalCase()}}Dto extends Equatable {
-  const {{name.pascalCase()}}Dto({});
+  const {{name.pascalCase()}}Dto();
   factory {{name.pascalCase()}}Dto.fromJson(Map<String, dynamic> json) =>
     _${{name.pascalCase()}}DtoFromJson(json);
 

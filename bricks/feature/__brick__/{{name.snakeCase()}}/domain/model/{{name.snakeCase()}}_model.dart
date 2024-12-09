@@ -1,9 +1,9 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class {{name.pascalCase()}}Model extends Equatable {
+part '{{name.snakeCase()}}_model.freezed.dart';
 
-  const {{name.pascalCase()}}Model({});
-
-   @override
-  List<Object> get props => [];
+@freezed
+class {{name.pascalCase()}}Model with _${{name.pascalCase()}}Model {
+  const factory {{name.pascalCase()}}Model({
+  }) = _{{name.pascalCase()}}Model;
 }

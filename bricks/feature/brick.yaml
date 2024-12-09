@@ -13,7 +13,7 @@ version: 0.1.0+1
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
 environment:
-  mason: ">=0.1.0-dev.59 <0.1.0"
+  mason: ^0.1.0
 
 # Variables specify dynamic values that your brick depends on.
 # Zero or more variables can be specified for a given brick.
@@ -28,11 +28,11 @@ environment:
 vars:
   name:
     type: string
-    description: The name of a new feature
-    default: feature
-    prompt: What is your feature named?
+    description: Feature name
+    default: home
+    prompt: What is the feature name?
   project_name:
     type: string
     description: The name of the flutter project
-    default: my_project
+    default: project_name
     prompt: What is the name of the project?

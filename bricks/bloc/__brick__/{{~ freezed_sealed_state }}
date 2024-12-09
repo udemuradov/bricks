@@ -1,10 +1,10 @@
-
+// ignore_for_file: doc_directive_unknown
 part of '{{name.snakeCase()}}_bloc.dart';
 
 /// {@template {{name.pascalCase()}}_placeholder}
-/// Entity placeholder for {{name.pascalCase()}}State
+/// Model placeholder for {{name.pascalCase()}}State
 /// {@endtemplate}
-typedef {{name.pascalCase()}}Entity = Object;
+typedef {{name.pascalCase()}}Model = Object;
 
 /// {@template {{name.pascalCase()}}}
 /// {{name.pascalCase()}}State.
@@ -13,28 +13,28 @@ sealed class {{name.pascalCase()}}State extends _${{name.pascalCase()}}StateBase
   /// Idling state
   /// {@macro {{name.pascalCase()}}}
   const factory {{name.pascalCase()}}State.idle({
-    required {const {name.pascalCase()}}Entity? data,
+    required  {{name.pascalCase()}}Model? data,
     String message,
   }) = {{name.pascalCase()}}State$Idle;
 
   /// Processing
   /// {@macro {{name.pascalCase()}}}
   const factory {{name.pascalCase()}}State.processing({
-    required {const {name.pascalCase()}}Entity? data,
+    required  {{name.pascalCase()}}Model? data,
     String message,
   }) = {{name.pascalCase()}}State$Processing;
 
   /// Successful
   /// {@macro {{name.pascalCase()}}}
   const factory {{name.pascalCase()}}State.successful({
-    required {const {name.pascalCase()}}Entity? data,
+    required  {{name.pascalCase()}}Model? data,
     String message,
   }) = {{name.pascalCase()}}State$Successful;
 
   /// An error has occurred
   /// {@macro {{name.pascalCase()}}}
   const factory {{name.pascalCase()}}State.error({
-    required {const {name.pascalCase()}}Entity? data,
+    required  {{name.pascalCase()}}Model? data,
     String message,
   }) = {{name.pascalCase()}}State$Error;
 
@@ -80,11 +80,11 @@ typedef {{name.pascalCase()}}StateMatch<R, S extends {{name.pascalCase()}}State>
 @immutable
 abstract base class _${{name.pascalCase()}}StateBase {
   /// {@nodoc}
-  const ${{name.pascalCase()}}StateBase({required this.data, required this.message});
+  const _${{name.pascalCase()}}StateBase({required this.data, required this.message});
 
-  /// Data entity payload.
+  /// Data Model payload.
   @nonVirtual
-  final {{name.pascalCase()}}Entity? data;
+  final {{name.pascalCase()}}Model? data;
 
   /// Message or state description.
   @nonVirtual
@@ -110,10 +110,10 @@ abstract base class _${{name.pascalCase()}}StateBase {
     required {{name.pascalCase()}}StateMatch<R, {{name.pascalCase()}}State$Error> error,
   }) =>
       switch (this) {
-        {const const {name.pascalCase()}}State$Idle s => idle(s),
-        {const const {name.pascalCase()}}State$Processing s => processing(s),
-        {const const {name.pascalCase()}}State$Successful s => successful(s),
-        {const const {name.pascalCase()}}State$Error s => error(s),
+        final {{name.pascalCase()}}State$Idle s => idle(s),
+        final {{name.pascalCase()}}State$Processing s => processing(s),
+        final {{name.pascalCase()}}State$Successful s => successful(s),
+        final {{name.pascalCase()}}State$Error s => error(s),
         _ => throw AssertionError(),
       };
 
