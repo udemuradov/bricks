@@ -1,4 +1,4 @@
-import 'package:{{project_name}}/core/utils/exception_handling.dart';
+import 'package:{{project_name}}/src/core/utils/exception_handling.dart';
 import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/data/datasource/{{name.snakeCase()}}_api.dart';
 import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/data/mappers/{{name.snakeCase()}}_mapper.dart';
 import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/domain/{{name.snakeCase()}}_repository.dart';
