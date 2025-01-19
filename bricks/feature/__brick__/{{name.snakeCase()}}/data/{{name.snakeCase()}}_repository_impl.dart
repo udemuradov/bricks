@@ -6,7 +6,7 @@ import 'package:{{project_name}}/src/features/{{name.snakeCase()}}/domain/model/
 
 class {{name.pascalCase()}}RepositoryImpl implements {{name.pascalCase()}}Repository {
   final {{name.pascalCase()}}Api _api;
-  {{name.pascalCase()}}RepositoryImpl(
+  const {{name.pascalCase()}}RepositoryImpl(
     this._api,
   );
 
